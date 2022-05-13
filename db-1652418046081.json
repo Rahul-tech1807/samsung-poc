@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "fieldName": "employee_id",
+      "completed": true,
+      "dataType": "Integer"
+    },
+    {
+      "fieldName": "employee_name",
+      "completed": true,
+      "dataType": "String"
+    },
+    {
+      "fieldName": "employee_address",
+      "completed": true,
+      "dataType": "String"
+    }
+  ]
+}
