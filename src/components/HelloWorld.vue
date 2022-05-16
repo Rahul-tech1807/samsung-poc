@@ -47,6 +47,7 @@
               </b-input-group-prepend>
             </b-input-group>
           </b-button-group>
+          <b-icon icon="gear-fill" aria-hidden="true" class="left-space" v-b-toggle.sidebar-right></b-icon>
         </b-col>
 
         <b-col cols="2" class="bt-right">
@@ -143,11 +144,20 @@
         <Card-Entity :showEntityCard="showEntityCard" @hideEntity="showEntityCard = false"/>
       </b-col>
     </div> 
+
+     <!--right side bar(entity setting) -->
+    <b-sidebar id="sidebar-right" style="margin-top:121px;" right shadow >
+         <b-col  id="setting-sidebar" class="entity-setting">
+        <EntitySetting/>
+      </b-col>
+    </b-sidebar>
+
   </div>
 </template>
 
 <script>
 import CardEntity from './CardEntity.vue'
+import EntitySetting from './EntitySetting.vue'
 export default {
   
   name: "HelloWorld",
@@ -158,7 +168,8 @@ export default {
     };
   },
   components:{
-    CardEntity
+    CardEntity,
+    EntitySetting,
   },
   methods: {
     mousedown() {
@@ -206,5 +217,13 @@ a {
 .sidebarIcons {
   font-size: 2rem;
   float: right;
+}
+.left-space{
+  margin:10px;
+  cursor:pointer;
+  border:none !important;
+}
+.entity-setting{
+  justify-content:center;
 }
 </style>
